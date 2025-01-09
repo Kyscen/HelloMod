@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "hellomod",
+	"version": "${version}",
+	"name": "HelloMod",
+	"description": "Hola que tal",
+	"authors": [
+		"Joe Mama"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hellomod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.kyscen.hellomod.HelloMod"
+		],
+		"client": [
+			"net.kyscen.hellomod.HelloModClient"
+		],
+		"fabric-datagen": [
+			"net.kyscen.hellomod.HelloModDataGenerator"
+		]
+	},
+	"mixins": [
+		"hellomod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
